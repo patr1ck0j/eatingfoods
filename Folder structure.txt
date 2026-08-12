@@ -1,0 +1,13 @@
+eatingfoods/
+├── index.html
+├── about.html
+├── contact.html
+├── high-protein-meal-prep-400-calories.html
+├── 5-ingredient-dinners-20-minutes.html    <-- renamed from 15 Five-ingredient...
+├── overnight-oats-meal-prep.html
+├── sitemap.xml
+├── robots.txt
+└── images/
+    ├── 15-Five-Ingredient-Dinners-Ready-in-20-Minutes.jpg
+    ├── high-protein-meal-prep-400-calories.jpg
+    └── overnight-oats-meal-prep.jpg

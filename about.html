@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | eatingfoods.com</title>
+  <meta name="description" content="Learn about eatingfoods.com and Ogonna - quick 5-ingredient dinners for busy people. All recipes tested in a real kitchen.">
+  <link rel="canonical" href="https://eatingfoods.com/about.html">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== COLOR PALETTE - SAME AS INDEX ===== */
+    :root {
+      --tomato: #FF6B6B;
+      --lemon: #FFE66D;
+      --mint: #4ECDC4;
+      --peach: #FF9F1C;
+      --berry: #C44569;
+      --cream: #FFF8F0;
+      --dark: #2D3436;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--cream) 0%, #FFFFFF 100%);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(90deg, var(--tomato), var(--peach), var(--lemon));
+      padding: 20px 0;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+      text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.25);
+      transform: translateY(-2px);
+    }
+
+    /* CONTACT BUTTON STYLE */
+    nav a.btn-contact {
+      background: var(--berry);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(196, 69, 105, 0.4);
+    }
+
+    nav a.btn-contact:hover {
+      background: var(--tomato);
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    main {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      margin: 40px auto;
+      box-shadow: 0 8px 25px rgba(78, 205, 196, 0.15);
+      border-top: 8px solid var(--mint);
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, var(--tomato), var(--berry));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    h2 {
+      color: var(--berry);
+      margin: 30px 0 15px;
+      font-size: 1.5rem;
+      border-left: 5px solid var(--peach);
+      padding-left: 12px;
+    }
+
+    p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, var(--lemon), #FFF9E6);
+      border-left: 6px solid var(--peach);
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 12px;
+    }
+
+    /* ===== CTA BOX ===== */
+    .cta {
+      background: linear-gradient(135deg, var(--lemon), var(--peach));
+      padding: 35px;
+      border-radius: 20px;
+      text-align: center;
+      margin: 40px 0;
+      box-shadow: 0 10px 30px rgba(255, 159, 28, 0.3);
+    }
+
+    .cta h3 {
+      font-size: 1.6rem;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 15px;
+      background: var(--berry);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(196, 69, 105, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: var(--tomato);
+      transform: translateY(-3px);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: var(--lemon);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 600px) {
+      main { padding: 25px; }
+      header .container { flex-direction: column; gap: 15px; }
+      nav { gap: 8px; flex-wrap: wrap; justify-content: center; }
+      h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">🍽️ eatingfoods.com</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn-contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>About eatingfoods</h1>
+    
+    <p>Hi! I'm <strong>Ogonna</strong>. I created <strong>eatingfoods.com</strong> to help busy people get dinner on the table fast without sacrificing flavor.</p>
+
+    <div class="highlight-box">
+      <p><strong>Our Mission:</strong> Real food, real fast. 5 ingredients or less. 20-30 minutes max. No fancy equipment, no 2-hour recipes.</p>
+    </div>
+
+    <h2>Why I Started This Blog</h2>
+    <p>After too many nights of takeout and complicated recipes with 20 ingredients, I realized busy people need something different. Every recipe here is tested in my own kitchen in Port Harcourt with real time limits. If it takes longer than 30 minutes, it doesn't make the cut.</p>
+
+    <h2>What You'll Find Here</h2>
+    <ul style="margin: 15px 0 20px 25px;">
+      <li><strong>5-Ingredient Dinners:</strong> Simple meals with pantry staples</li>
+      <li><strong>20-Minute Meals:</strong> Fast dinners for weeknights</li>
+      <li><strong>Low Carb & Keto Options:</strong> Under 10g net carbs per serving</li>
+      <li><strong>Family Friendly:</strong> Recipes everyone will actually eat</li>
+    </ul>
+
+    <h2>Recipe Promise</h2>
+    <p>All recipes are tested 3 times before publishing. We use ingredients you can find at any grocery store, and we clearly list prep time, cook time, and net carbs for low carb meals.</p>
+
+    <div class="cta">
+      <h3>Get My Free 5-Ingredient Shopping List</h3>
+      <p>Start cooking faster tonight with this free PDF</p>
+      <a href="#">Download Free Now</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 eatingfoods.com | <a href="#">Privacy</a> | <a href="#">Disclosure</a></p>
+    </div>
+  </footer>
+</body>
+</html>

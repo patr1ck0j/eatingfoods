@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eatingfoods.com - Fast Dinners for Busy People</title>
+  <meta name="description" content="Quick, easy, and healthy dinner recipes ready in 30 minutes or less. Perfect for weeknights with 5 ingredients or less. Keto, Low Carb, and family friendly meals.">
+  <link rel="canonical" href="https://eatingfoods.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== COLOR PALETTE ===== */
+    :root {
+      --tomato: #FF6B6B;
+      --lemon: #FFE66D;
+      --mint: #4ECDC4;
+      --peach: #FF9F1C;
+      --berry: #C44569;
+      --cream: #FFF8F0;
+      --dark: #2D3436;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--cream) 0%, #FFFFFF 100%);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(90deg, var(--tomato), var(--peach), var(--lemon));
+      padding: 20px 0;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+      text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.25);
+      transform: translateY(-2px);
+    }
+
+    /* CONTACT BUTTON STYLE */
+    nav a.btn-contact {
+      background: var(--berry);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(196, 69, 105, 0.4);
+    }
+
+    nav a.btn-contact:hover {
+      background: var(--tomato);
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    /* ===== ANNOUNCEMENT BAR ===== */
+    .announce-bar {
+      background: linear-gradient(90deg, var(--mint), var(--peach));
+      padding: 12px 0;
+      text-align: center;
+      color: white;
+      font-weight: 600;
+    }
+    .announce-bar a {
+      background: white;
+      color: var(--berry);
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      margin-left: 10px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    .announce-bar a:hover {
+      background: var(--lemon);
+      transform: scale(1.05);
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    main h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 40px 0 10px;
+      background: linear-gradient(90deg, var(--tomato), var(--berry));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    main > p {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    /* ===== POST CARDS ===== */
+    .post-card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 25px rgba(78, 205, 196, 0.15);
+      border-left: 8px solid var(--mint);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .post-card.featured {
+      border-left-color: var(--berry);
+      background: linear-gradient(135deg, #FFF 0%, var(--cream) 100%);
+    }
+
+    .post-card.featured::before {
+      content: "🔥 NEW";
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: var(--tomato);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .post-card:nth-child(4) {
+      border-left-color: var(--peach);
+    }
+
+    .post-card:nth-child(5) {
+      border-left-color: var(--tomato);
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(255, 107, 107, 0.25);
+    }
+
+    .post-card h2 a {
+      color: var(--berry);
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .post-card h2 a:hover {
+      color: var(--tomato);
+      text-decoration: underline;
+    }
+
+    .meta {
+      color: #888;
+      font-size: 0.9rem;
+      margin: 8px 0 12px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--mint);
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 15px;
+      margin-left: 8px;
+    }
+
+    .badge.protein {
+      background: var(--peach);
+    }
+
+    .post-card > a {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--mint);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .post-card > a:hover {
+      background: var(--peach);
+      transform: scale(1.05);
+    }
+
+    /* ===== CTA BOX ===== */
+    .cta {
+      background: linear-gradient(135deg, var(--lemon), var(--peach));
+      padding: 35px;
+      border-radius: 20px;
+      text-align: center;
+      margin: 50px 0;
+      box-shadow: 0 10px 30px rgba(255, 159, 28, 0.3);
+    }
+
+    .cta h3 {
+      font-size: 1.6rem;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 15px;
+      background: var(--berry);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(196, 69, 105, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: var(--tomato);
+      transform: translateY(-3px);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: var(--lemon);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 600px) {
+      main h1 { font-size: 2rem; }
+      header .container { flex-direction: column; gap: 15px; }
+      nav { gap: 8px; flex-wrap: wrap; justify-content: center; }
+      nav a { margin-left: 0; }
+      .post-card.featured::before { top: 10px; right: 15px; }
+      .announce-bar { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">🍽️ eatingfoods.com</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn-contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ANNOUNCEMENT BAR WITH FORM LINK -->
+  <div class="announce-bar">
+    🎁 Free Download: 5-Ingredient Shopping List PDF 
+    <a href="https://preview.mailerlite.io/forms/2571621/195590738332878400/share" target="_blank">Get It Free</a>
+  </div>
+
+  <main class="container">
+    <h1>Fast Dinners for Busy People</h1>
+    <p>No time? No problem. Get dinner on the table in 20-30 minutes with 5 ingredients or less. Real food, real fast. Keto & Low Carb options included.</p>
+
+    <!-- NEW HIGH PROTEIN ARTICLE ADDED HERE -->
+    <div class="post-card">
+      <h2><a href="high-protein-meal-prep-400-calories.html">20 High Protein Meal Prep Recipes for the Week Under 400 Calories <span class="badge protein">30g+ Protein</span></a></h2>
+      <p class="meta">Published: Aug 12, 2026</p>
+      <p>Lose weight and build muscle with these 20 high protein meal prep recipes. All under 400 calories and 30g+ protein per serving. Make 5 days of lunches in 2 hours. Keto, low carb, and freezer friendly options included.</p>
+      <a href="high-protein-meal-prep-400-calories.html">Get The Meal Prep Plan →</a>
+    </div>
+
+    <div class="post-card">
+      <h2><a href="15 Five-ingredient Dinners Ready in 20 minutes.html">15 Five-Ingredient Dinners Ready in 20 Minutes</a></h2>
+      <p class="meta">Published: Aug 12, 2026</p>
+      <p>Busy weeknight? These 15 dinners use only 5 ingredients and are ready in 20 minutes or less. No fancy shopping, just fast, tasty meals the whole family will love.</p>
+      <a href="15 Five-ingredient Dinners Ready in 20 minutes.html">Read Full Recipe List →</a>
+    </div>
+
+    <!-- UPDATED CTA WITH FORM LINK -->
+    <div class="cta">
+      <h3>Get My Free 5-Ingredient Shopping List PDF 🛒</h3>
+      <p>Download all 15 recipes + complete grocery list to make weeknights easier</p>
+      <a href="https://preview.mailerlite.io/forms/2571621/195590738332878400/share" target="_blank">Download Free Now</a>
+    </div>
+
+    <div class="post-card">
+      <h2><a href="overnight-oats-meal-prep.html">12 Overnight Oats Variations for Meal Prep That Actually Taste Good <span class="badge">5 Min Prep</span></a></h2>
+      <p class="meta">Published: Aug 12, 2026</p>
+      <p>Grab-and-go breakfast that tastes like dessert. 12 overnight oats recipes with 5 ingredients, 300-400 calories, and 15g+ protein. Make 5 jars in 10 minutes for the whole week.</p>
+      <a href="overnight-oats-meal-prep.html">Get The Recipes →</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 eatingfoods.com | <a href="#">Privacy</a> | <a href="#">Disclosure</a></p>
+    </div>
+  </footer>
+</body>
+</html>

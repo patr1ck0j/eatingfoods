@@ -47,7 +47,6 @@
       padding: 20px 0;
     }
 
-    /* ===== HEADER + MENU ===== */
     header {
       background: linear-gradient(90deg, var(--tomato), var(--peach), var(--lemon));
       padding: 20px 0;
@@ -104,13 +103,43 @@
       transform: translateY(-2px) scale(1.05);
     }
 
-    /* ===== ANNOUNCEMENT BAR ===== */
     .announce-bar {
       background: linear-gradient(90deg, var(--mint), var(--peach));
       padding: 12px 0;
       text-align: center;
       color: white;
       font-weight: 600;
+    }
+    .announce-bar a {
+      background: white;
+      color: var(--berry);
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      margin-left: 10px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    .announce-bar a:hover {
+      background: var(--lemon);
+      transform: scale(1.05);
+    }
+
+    .featured-image {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      margin: 25px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    main {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      margin: 40px auto;
+      box-shadow: 0 8px 25px rgba(78, 205, 196, 0.15);
+      border      font-weight: 600;
     }
     .announce-bar a {
       background: white;

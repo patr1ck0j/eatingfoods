@@ -15,12 +15,10 @@
   <meta property="og:url" content="https://patr1ck0j.github.io/eatingfoods/5-ingredient-dinners-20-minutes">
   <meta property="og:image" content="https://patr1ck0j.github.io/eatingfoods/images/15-Five-Ingredient-Dinners-Ready-in-20-Minutes.jpg">
 
-  <!-- PRELOAD CRITICAL FONT FOR FASTER TEXT RENDER -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"></noscript>
 
   <style>
-    /* ===== EATINGFOODS.COM THEME V2 ===== */
     :root {
       --tomato: #FF6B6B;
       --lemon: #FFE66D;
@@ -30,87 +28,277 @@
       --cream: #FFF8F0;
       --dark: #2D3436;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: 'Poppins', 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, var(--cream) 0%, #FFFFFF 100%);
       color: var(--dark);
       line-height: 1.7;
     }
-
-    .container {
-      width: 90%;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px 0;
-    }
-
+    .container { width: 90%; max-width: 900px; margin: 0 auto; padding: 20px 0; }
     header {
       background: linear-gradient(90deg, var(--tomato), var(--peach), var(--lemon));
-      padding: 20px 0;
-      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      padding: 20px 0; box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+      position: sticky; top: 0; z-index: 100;
     }
+    .logo { font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; text-shadow: 2px 2px 0px rgba(0,0,0,0.1); }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    nav { display: flex; gap: 10px; align-items: center; }
+    nav a { color: white; text-decoration: none; font-weight: 600; padding: 8px 16px; border-radius: 20px; transition: all 0.3s ease; }
+    nav a:hover { background: rgba(255,255,255,0.25); transform: translateY(-2px); }
+    nav a.btn-contact { background: var(--berry); color: white; padding: 10px 20px; border-radius: 30px; box-shadow: 0 4px 12px rgba(196, 69, 105, 0.4); }
+    .announce-bar { background: linear-gradient(90deg, var(--mint), var(--peach)); padding: 12px 0; text-align: center; color: white; font-weight: 600; }
+    .announce-bar a { background: white; color: var(--berry); padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 10px; font-weight: 700; }
+    .featured-image { width: 100%; height: auto; border-radius: 16px; margin: 25px 0; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    main { background: white; border-radius: 20px; padding: 40px; margin: 40px auto; box-shadow: 0 8px 25px rgba(78, 205, 196, 0.15); border-top: 8px solid var(--mint); }
+    h1 { font-size: 2.4rem; margin-bottom: 15px; background: linear-gradient(90deg, var(--tomato), var(--berry)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .meta { color: #888; font-size: 0.9rem; margin-bottom: 25px; }
+    h2 { color: var(--berry); margin: 35px 0 15px; font-size: 1.7rem; border-left: 5px solid var(--peach); padding-left: 12px; }
+    h3 { color: var(--tomato); margin: 25px 0 12px; font-size: 1.3rem; }
+    h4 { color: var(--dark); margin: 15px 0 8px; font-weight: 600; }
+    p { margin-bottom: 18px; font-size: 1.05rem; }
+    .toc { background: linear-gradient(135deg, var(--lemon), #FFF9E6); border-left: 6px solid var(--peach); padding: 20px; margin: 25px 0; border-radius: 12px; }
+    .toc a { text-decoration: none; color: var(--berry); font-weight: 600; }
+    .recipe-card { padding: 25px; margin: 25px 0; border-radius: 16px; background: var(--cream); box-shadow: 0 4px 15px rgba(78, 205, 196, 0.1); border-left: 6px solid var(--mint); }
+    .recipe-meta { font-size: 0.9em; color: var(--dark); background: white; display: inline-block; padding: 6px 14px; border-radius: 20px; margin-bottom: 12px; font-weight: 600; }
+    .ingredients { list-style: none; padding-left: 0; }
+    .ingredients li { padding: 6px 0; }
+    .ingredients li::before { content: "🥕 "; color: var(--peach); font-weight: bold; }
+    ol li { margin-bottom: 8px; }
+    .pro-tip { background: linear-gradient(135deg, #F0FDFD, white); border-left: 4px solid var(--mint); padding: 12px 16px; border-radius: 8px; margin-top: 12px; font-size: 0.95rem; }
+    .affiliate-box { background: linear-gradient(135deg, var(--lemon), #FFF9E6); border: 2px dashed var(--peach); padding: 20px; border-radius: 16px; margin: 25px 0; }
+    .cta { background: linear-gradient(135deg, var(--lemon), var(--peach)); padding: 35px; border-radius: 20px; text-align: center; margin: 40px 0; }
+    .cta a { display: inline-block; margin-top: 15px; background: var(--berry); color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: 700; }
+    footer { background: var(--dark); color: white; text-align: center; padding: 25px 0; margin-top: 40px; }
+  </style>
 
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: white;
-      text-decoration: none;
-      text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
-    }
+  <!-- Recipe Schema for ALL 15 recipes -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "15 Five-Ingredient Dinners Ready in 20 Minutes",
+    "itemListElement": [
+      {"@type": "Recipe", "name": "Honey Garlic Chicken & Rice", "prepTime": "PT5M", "cookTime": "PT15M", "totalTime": "PT20M", "recipeIngredient": ["Chicken thighs","Soy sauce","Honey","Garlic","Rice"]},
+      {"@type": "Recipe", "name": "Caprese Chicken Skillet", "prepTime": "PT5M", "cookTime": "PT15M", "totalTime": "PT20M", "recipeIngredient": ["Chicken breast","Tomatoes","Mozzarella","Basil","Balsamic glaze"]},
+      {"@type": "Recipe", "name": "BBQ Chicken Quesadillas", "prepTime": "PT5M", "cookTime": "PT10M", "totalTime": "PT15M", "recipeIngredient": ["Cooked chicken","BBQ sauce","Cheddar","Tortillas","Red onion"]},
+      {"@type": "Recipe", "name": "Pesto Chicken & Pasta", "prepTime": "PT5M", "cookTime": "PT15M", "totalTime": "PT20M", "recipeIngredient": ["Chicken","Pasta","Pesto","Cherry tomatoes","Parmesan"]},
+      {"@type": "Recipe", "name": "15-Minute Garlic Butter Salmon & Broccoli", "prepTime": "PT5M", "cookTime": "PT10M", "totalTime": "PT15M", "recipeIngredient": ["Salmon fillets","Broccoli florets","Butter","Garlic","Lemon"]},
+      {"@type": "Recipe", "name": "Lemon Garlic Shrimp Pasta", "prepTime": "PT5M", "cookTime": "PT15M", "totalTime": "PT20M", "recipeIngredient": ["Shrimp","Pasta","Butter","Garlic","Lemon"]},
+      {"@type": "Recipe", "name": "Shrimp Taco Bowls", "prepTime": "PT5M", "cookTime": "PT10M", "totalTime": "PT15M", "recipeIngredient": ["Shrimp","Taco seasoning","Rice","Black beans","Lime"]},
+      {"@type": "Recipe", "name": "Beef Stir Fry & Bell Peppers", "prepTime": "PT5M", "cookTime": "PT15M", "totalTime": "PT20M", "recipeIngredient": ["Beef strips","Bell peppers","Soy sauce","Garlic","Rice noodles"]},
+      {"@type": "Recipe", "name": "Spicy Sausage & Peppers", "prepTime": "PT5M", "cookTime": "PT15M", "totalTime": "PT20M", "recipeIngredient": ["Italian sausage","Bell peppers","Onion","Olive oil","Hoagie rolls"]},
+      {"@type": "Recipe", "name": "Turkey Taco Skillet", "prepTime": "PT5M", "cookTime": "PT15M", "totalTime": "PT20M", "recipeIngredient": ["Ground turkey","Taco seasoning","Black beans","Corn","Cheese"]},
+      {"@type": "Recipe", "name": "Chickpea Curry in 20 Minutes", "prepTime": "PT5M", "cookTime": "PT15M", "totalTime": "PT20M", "recipeIngredient": ["Canned chickpeas","Coconut milk","Curry paste","Spinach","Rice"]},
+      {"@type": "Recipe", "name": "Teriyaki Tofu & Broccoli", "prepTime": "PT5M", "cookTime": "PT15M", "totalTime": "PT20M", "recipeIngredient": ["Tofu","Broccoli","Teriyaki sauce","Rice","Sesame oil"]},
+      {"@type": "Recipe", "name": "Tomato Basil Pasta", "prepTime": "PT5M", "cookTime": "PT15M", "totalTime": "PT20M", "recipeIngredient": ["Pasta","Canned tomatoes","Garlic","Parmesan","Basil"]},
+      {"@type": "Recipe", "name": "Egg Fried Rice", "prepTime": "PT5M", "cookTime": "PT10M", "totalTime": "PT15M", "recipeIngredient": ["Cooked rice","Eggs","Soy sauce","Peas","Green onion"]},
+      {"@type": "Recipe", "name": "Mediterranean Chickpea Salad Wrap", "prepTime": "PT10M", "cookTime": "PT0M", "totalTime": "PT10M", "recipeIngredient": ["Chickpeas","Cucumber","Feta","Tzatziki","Tortillas"]}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">🍽️ eatingfoods.com</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn-contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  <div class="announce-bar">
+    🎁 Free Download: 5-Ingredient Shopping List PDF 
+    <a href="https://preview.mailerlite.io/forms/2571621/195590738332878400/share" target="_blank">Get It Free</a>
+  </div>
 
-    nav {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
+  <main class="container">
+    <h1>15 Five-Ingredient Dinners Ready in 20 Minutes</h1>
+    <p class="meta">By Ogonna | Published: Aug 12, 2026 | 6 min read</p>
+    
+    <img src="images/15-Five-Ingredient-Dinners-Ready-in-20-Minutes.jpg" alt="15 Five-Ingredient Dinners Ready in 20 Minutes - quick healthy meals" class="featured-image" loading="lazy" width="1200" height="630">
+    
+    <p>After work, the last thing you want is a 12-ingredient recipe and 1 hour of cooking. If you can count to 5 and set a timer for 20, you can get dinner on the table. These <strong>five ingredient dinners</strong> are perfect for busy weeknights when you want something fast, tasty, and no-fuss.</p>
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 8px 16px;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-    }
+    <nav class="toc">
+      <strong>Jump to:</strong>
+      <ul>
+        <li><a href="#how-to">How to make 5-ingredient dinners work</a></li>
+        <li><a href="#recipes">15 Recipes with Prep Steps</a></li>
+        <li><a href="#shopping-list">Shopping List</a></li>
+        <li><a href="#faq">FAQs</a></li>
+      </ul>
+    </nav>
 
-    nav a:hover {
-      background: rgba(255,255,255,0.25);
-      transform: translateY(-2px);
-    }
+    <section id="how-to">
+      <h2>How to make 5-ingredient dinners work for you</h2>
+      <ul>
+        <li><strong>Shop with a 5-ingredient rule:</strong> Protein + Veg + Carb + Sauce + Flavor</li>
+        <li><strong>Pantry staples count as "1":</strong> Salt, pepper, and oil don't count against your 5</li>
+        <li><strong>20-minute cooking tips:</strong> Use an air fryer, sheet pan, or one-pot method</li>
+      </ul>
+    </section>
 
-    nav a.btn-contact {
-      background: var(--berry);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      box-shadow: 0 4px 12px rgba(196, 69, 105, 0.4);
-    }
+    <div class="affiliate-box">
+      <h3>🛒 My Go-To Kitchen Tools for 20-Min Meals</h3>
+      <p>These 3 things save me 10 minutes every night:</p>
+      <a href="#">Sheet Pan Set →</a> | <a href="#">Air Fryer →</a> | <a href="#">Sharp Chef Knife →</a>
+    </div>
 
-    nav a.btn-contact:hover {
-      background: var(--tomato);
-      transform: translateY(-2px) scale(1.05);
-    }
+    <section id="recipes">
+      <h2>15 Five-Ingredient Dinner Recipes</h2>
 
-    .announce-bar {
-      background: linear-gradient(90deg, var(--mint), var(--peach));
-      padding: 12px 0;
-      text-align: center;
-      color: white;
-      font-weight: 600;
-    }
-    .announce-bar a {
+      <!-- 1 -->
+      <div class="recipe-card">
+        <h3>1. Honey Garlic Chicken & Rice</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 15 min | Total: 20 min</div>
+        <p><strong>Why you'll love it:</strong> Sweet, sticky, and better than takeout.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Chicken thighs</li><li>Soy sauce</li><li>Honey</li><li>Garlic</li><li>Rice</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Cook rice according to package.</li><li>Sear chicken 5 min per side in a skillet.</li><li>Add soy sauce, honey, and minced garlic. Simmer 5 min until glazed.</li><li>Serve over rice.</li></ol>
+        <div class="pro-tip"><strong>Pro tip:</strong> Swap chicken for tofu for a vegetarian version.</div>
+      </div>
+
+      <!-- 2 -->
+      <div class="recipe-card">
+        <h3>2. Caprese Chicken Skillet</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 15 min | Total: 20 min</div>
+        <p><strong>Why you'll love it:</strong> One pan, juicy chicken, and fresh mozzarella.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Chicken breast</li><li>Tomatoes</li><li>Mozzarella</li><li>Basil</li><li>Balsamic glaze</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Sear chicken 6 min per side.</li><li>Add sliced tomatoes and cook 2 min.</li><li>Top with mozzarella, cover 2 min to melt.</li><li>Garnish with basil and balsamic glaze.</li></ol>
+      </div>
+
+      <!-- 3 -->
+      <div class="recipe-card">
+        <h3>3. BBQ Chicken Quesadillas</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 10 min | Total: 15 min</div>
+        <p><strong>Why you'll love it:</strong> Crispy, cheesy, and kid-approved.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Cooked chicken</li><li>BBQ sauce</li><li>Cheddar</li><li>Tortillas</li><li>Red onion</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Toss chicken with BBQ sauce and onion.</li><li>Fill tortilla with chicken, cheese. Fold.</li><li>Cook 3 min per side until crispy.</li><li>Slice and serve.</li></ol>
+      </div>
+
+      <!-- 4 -->
+      <div class="recipe-card">
+        <h3>4. Pesto Chicken & Pasta</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 15 min | Total: 20 min</div>
+        <p><strong>Why you'll love it:</strong> Creamy pesto without the cream.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Chicken</li><li>Pasta</li><li>Pesto</li><li>Cherry tomatoes</li><li>Parmesan</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Boil pasta, reserve 1/4 cup water.</li><li>Sauté chicken 6-7 min.</li><li>Toss pasta with pesto, pasta water, chicken, tomatoes.</li><li>Top with parmesan.</li></ol>
+      </div>
+
+      <!-- 5 -->
+      <div class="recipe-card">
+        <h3>5. 15-Minute Garlic Butter Salmon & Broccoli</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 10 min | Total: 15 min</div>
+        <p><strong>Why you'll love it:</strong> Healthy, fast, and zero cleanup.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Salmon fillets</li><li>Broccoli florets</li><li>Butter</li><li>Garlic</li><li>Lemon</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Steam broccoli 4 min.</li><li>Sear salmon 4 min per side in butter and garlic.</li><li>Squeeze lemon over both.</li><li>Serve immediately.</li></ol>
+      </div>
+
+      <!-- 6 -->
+      <div class="recipe-card">
+        <h3>6. Lemon Garlic Shrimp Pasta</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 15 min | Total: 20 min</div>
+        <p><strong>Why you'll love it:</strong> Bright and restaurant-style at home.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Shrimp</li><li>Pasta</li><li>Butter</li><li>Garlic</li><li>Lemon</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Cook pasta, reserve water.</li><li>Sauté garlic in butter, add shrimp 3 min per side.</li><li>Toss with pasta, lemon juice, and pasta water.</li><li>Finish with zest.</li></ol>
+      </div>
+
+      <!-- 7 -->
+      <div class="recipe-card">
+        <h3>7. Shrimp Taco Bowls</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 10 min | Total: 15 min</div>
+        <p><strong>Why you'll love it:</strong> Takeout vibes in 15 minutes.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Shrimp</li><li>Taco seasoning</li><li>Rice</li><li>Black beans</li><li>Lime</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Heat rice and beans.</li><li>Season and sear shrimp 2 min per side.</li><li>Build bowls with rice, beans, shrimp.</li><li>Squeeze lime on top.</li></ol>
+      </div>
+
+      <!-- 8 -->
+      <div class="recipe-card">
+        <h3>8. Beef Stir Fry & Bell Peppers</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 15 min | Total: 20 min</div>
+        <p><strong>Why you'll love it:</strong> Faster than delivery.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Beef strips</li><li>Bell peppers</li><li>Soy sauce</li><li>Garlic</li><li>Rice noodles</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Soak noodles in hot water.</li><li>Stir fry beef and garlic 4 min.</li><li>Add peppers and soy sauce. Cook 3 min.</li><li>Toss with noodles.</li></ol>
+      </div>
+
+      <!-- 9 -->
+      <div class="recipe-card">
+        <h3>9. Spicy Sausage & Peppers</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 15 min | Total: 20 min</div>
+        <p><strong>Why you'll love it:</strong> Sheet pan dinner with no dishes.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Italian sausage</li><li>Bell peppers</li><li>Onion</li><li>Olive oil</li><li>Hoagie rolls</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Toss sausage, peppers, onion with oil.</li><li>Roast at 425F for 15 min.</li><li>Serve in hoagie rolls.</li><li>Drizzle with pan juices.</li></ol>
+      </div>
+
+      <!-- 10 -->
+      <div class="recipe-card">
+        <h3>10. Turkey Taco Skillet</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 15 min | Total: 20 min</div>
+        <p><strong>Why you'll love it:</strong> One pan, big flavor.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Ground turkey</li><li>Taco seasoning</li><li>Black beans</li><li>Corn</li><li>Cheese</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Brown turkey 6 min.</li><li>Add seasoning, beans, corn. Cook 5 min.</li><li>Top with cheese, cover to melt.</li><li>Serve with chips.</li></ol>
+      </div>
+
+      <!-- 11 -->
+      <div class="recipe-card">
+        <h3>11. Chickpea Curry in 20 Minutes</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 15 min | Total: 20 min</div>
+        <p><strong>Why you'll love it:</strong> Creamy, vegan, and freezer-friendly.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Canned chickpeas</li><li>Coconut milk</li><li>Curry paste</li><li>Spinach</li><li>Rice</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Start rice.</li><li>Heat curry paste, add coconut milk and chickpeas. Simmer 10 min.</li><li>Stir in spinach.</li><li>Serve over rice.</li></ol>
+      </div>
+
+      <!-- 12 -->
+      <div class="recipe-card">
+        <h3>12. Teriyaki Tofu & Broccoli</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 15 min | Total: 20 min</div>
+        <p><strong>Why you'll love it:</strong> Crispy tofu without frying.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Tofu</li><li>Broccoli</li><li>Teriyaki sauce</li><li>Rice</li><li>Sesame oil</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Pan fry tofu cubes in sesame oil 5 min.</li><li>Add broccoli, steam 4 min.</li><li>Pour teriyaki sauce and toss.</li><li>Serve over rice.</li></ol>
+      </div>
+
+      <!-- 13 -->
+      <div class="recipe-card">
+        <h3>13. Tomato Basil Pasta</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 15 min | Total: 20 min</div>
+        <p><strong>Why you'll love it:</strong> Pantry dinner that feels fancy.</p>
+        <h4>Ingredients</h4>
+        <ul class="ingredients"><li>Pasta</li><li>Canned tomatoes</li><li>Garlic</li><li>Parmesan</li><li>Basil</li></ul>
+        <h4>How to prepare</h4>
+        <ol><li>Cook pasta, reserve water.</li><li>Sauté garlic, add tomatoes, simmer 8 min.</li><li>Toss pasta in sauce.</li><li>Top with basil and parmesan.</li></ol>
+      </div>
+
+      <!-- 14 -->
+      <div class="recipe-card">
+        <h3>14. Egg Fried Rice</h3>
+        <div class="recipe-meta">Prep: 5 min | Cook: 10    .announce-bar a {
       background: white;
       color: var(--berry);
       padding: 6px 14px;

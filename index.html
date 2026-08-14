@@ -135,12 +135,64 @@
       box-shadow: 0 12px 35px rgba(255, 107, 107, 0.25);
     }
 
+    /* ===== IMAGE WITH TITLE OVERLAY ===== */
+    .post-image {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+    }
+
     .post-card img {
       width: 100%;
-      height: 220px;
+      height: 100%;
       object-fit: cover;
       display: block;
+      transition: transform 0.4s ease;
     }
+
+    .post-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .post-image::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60%;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    }
+
+    .post-title-overlay {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      right: 20px;
+      z-index: 2;
+      color: white;
+    }
+
+    .post-title-overlay h2 a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 800;
+      line-height: 1.3;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+
+    .post-title-overlay h2 a:hover {
+      color: var(--lemon);
+    }
+
+    .post-title-overlay .badge {
+      margin-left: 0;
+      margin-top: 8px;
+      display: inline-block;
+    }
+    /* ===== END OVERLAY ===== */
 
     .post-content {
       padding: 25px;
@@ -149,18 +201,10 @@
       flex-direction: column;
     }
 
-    .post-card h2 a {
-      color: var(--berry);
-      text-decoration: none;
-      font-size: 1.4rem;
-      line-height: 1.3;
-    }
-    .post-card h2 a:hover { color: var(--tomato); text-decoration: underline; }
-
     .meta {
       color: #888;
       font-size: 0.85rem;
-      margin: 8px 0 12px;
+      margin-bottom: 12px;
     }
 
     .badge {
@@ -233,6 +277,7 @@
       main h1 { font-size: 2rem; }
       header .container { flex-direction: column; gap: 15px; }
       .post-grid { grid-template-columns: 1fr; }
+      .post-title-overlay h2 a { font-size: 1.1rem; }
     }
   </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNJBMH4K9X"></script>
@@ -268,9 +313,14 @@
     <div class="post-grid">
       
       <article class="post-card">
-        <img src="images/high-protein-meal-prep-400-calories.jpg" alt="20 high protein meal prep recipes under 400 calories in containers" loading="lazy">
+        <div class="post-image">
+          <img src="images/high-protein-meal-prep-400-calories.jpg" alt="20 high protein meal prep recipes under 400 calories in containers" loading="lazy">
+          <div class="post-title-overlay">
+            <h2><a href="high-protein-meal-prep-400-calories.html">20 High Protein Meal Prep Recipes Under 400 Calories</a></h2>
+            <span class="badge protein">30g+ Protein</span>
+          </div>
+        </div>
         <div class="post-content">
-          <h2><a href="high-protein-meal-prep-400-calories.html">20 High Protein Meal Prep Recipes Under 400 Calories <span class="badge protein">30g+ Protein</span></a></h2>
           <p class="meta">Published: Aug 12, 2026</p>
           <p>Lose weight and build muscle with these 20 high protein meal prep recipes. All under 400 calories and 30g+ protein per serving. Make 5 days of lunches in 2 hours.</p>
           <a href="high-protein-meal-prep-400-calories.html" class="btn">Get The Meal Prep Plan →</a>
@@ -278,9 +328,13 @@
       </article>
 
       <article class="post-card">
-        <img src="images/15-Five-Ingredient-Dinners-Ready-in-20-Minutes.jpg" alt="15 five ingredient dinners ready in 20 minutes on a table" loading="lazy">
+        <div class="post-image">
+          <img src="images/15-Five-Ingredient-Dinners-Ready-in-20-Minutes.jpg" alt="15 five ingredient dinners ready in 20 minutes on a table" loading="lazy">
+          <div class="post-title-overlay">
+            <h2><a href="15 Five-ingredient Dinners Ready in 20 minutes.html">15 Five-Ingredient Dinners Ready in 20 Minutes</a></h2>
+          </div>
+        </div>
         <div class="post-content">
-          <h2><a href="15 Five-ingredient Dinners Ready in 20 minutes.html">15 Five-Ingredient Dinners Ready in 20 Minutes</a></h2>
           <p class="meta">Published: Aug 12, 2026</p>
           <p>Busy weeknight? These 15 dinners use only 5 ingredients and are ready in 20 minutes or less. No fancy shopping, just fast, tasty meals the whole family will love.</p>
           <a href="15 Five-ingredient Dinners Ready in 20 minutes.html" class="btn">Read Full Recipe List →</a>
@@ -288,9 +342,14 @@
       </article>
 
       <article class="post-card">
-        <img src="images/overnight-oats-meal-prep.jpg" alt="12 overnight oats meal prep jars with fruit toppings" loading="lazy">
+        <div class="post-image">
+          <img src="images/overnight-oats-meal-prep.jpg" alt="12 overnight oats meal prep jars with fruit toppings" loading="lazy">
+          <div class="post-title-overlay">
+            <h2><a href="overnight-oats-meal-prep.html">12 Overnight Oats for Meal Prep That Actually Taste Good</a></h2>
+            <span class="badge">5 Min Prep</span>
+          </div>
+        </div>
         <div class="post-content">
-          <h2><a href="overnight-oats-meal-prep.html">12 Overnight Oats for Meal Prep That Actually Taste Good <span class="badge">5 Min Prep</span></a></h2>
           <p class="meta">Published: Aug 12, 2026</p>
           <p>Grab-and-go breakfast that tastes like dessert. 12 overnight oats recipes with 5 ingredients, 300-400 calories, and 15g+ protein. Make 5 jars in 10 minutes.</p>
           <a href="overnight-oats-meal-prep.html" class="btn">Get The Recipes →</a>

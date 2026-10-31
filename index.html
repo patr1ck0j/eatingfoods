@@ -5,7 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>eatingfoods.com - Quick Healthy Meal Prep & 20-Minute Dinners</title>
   <meta name="description" content="Fast, healthy meal prep recipes for busy people. 20 high protein meals under 400 cal, 15 five-ingredient dinners in 20 min, and 12 overnight oats. Keto & low carb options.">
-  <link rel="canonical" href="https://patr1ck0j.github.io/eatingfoods/">
+  <link rel="canonical" href="https://eatingfoods.com/">
+  <meta property="og:title" content="eatingfoods.com - Quick Healthy Meal Prep & 20-Minute Dinners">
+  <meta property="og:description" content="Fast, healthy meal prep recipes for busy people. High protein, 5-ingredient dinners, overnight oats. Keto & low carb options.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eatingfoods.com/">
+  <meta property="og:image" content="https://eatingfoods.com/images/overnight-oats-meal-prep.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="eatingfoods.com - Quick Healthy Meal Prep">
+  <meta name="twitter:description" content="Fast, healthy meal prep recipes for busy people.">
+  <meta name="twitter:image" content="https://eatingfoods.com/images/overnight-oats-meal-prep.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "eatingfoods.com",
+    "url": "https://eatingfoods.com/",
+    "description": "Fast, healthy meal prep recipes for busy people.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "eatingfoods.com",
+      "url": "https://eatingfoods.com/"
+    }
+  }
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
@@ -63,9 +86,12 @@
       color: white;
       text-decoration: none;
       font-weight: 600;
-      padding: 8px 16px;
+      padding: 10px 16px;
       border-radius: 20px;
       transition: all 0.3s ease;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
     }
     nav a:hover { background: rgba(255,255,255,0.25); transform: translateY(-2px); }
     nav a.btn-contact {
@@ -87,12 +113,13 @@
     .announce-bar a {
       background: white;
       color: var(--berry);
-      padding: 6px 14px;
+      padding: 8px 14px;
       border-radius: 20px;
       text-decoration: none;
       margin-left: 10px;
       font-weight: 700;
       transition: all 0.3s ease;
+      display: inline-block;
     }
     .announce-bar a:hover { background: var(--lemon); transform: scale(1.05); }
 
@@ -135,7 +162,6 @@
       box-shadow: 0 12px 35px rgba(255, 107, 107, 0.25);
     }
 
-    /* ===== IMAGE WITH TITLE OVERLAY ===== */
     .post-image {
       position: relative;
       width: 100%;
@@ -192,7 +218,6 @@
       margin-top: 8px;
       display: inline-block;
     }
-    /* ===== END OVERLAY ===== */
 
     .post-content {
       padding: 25px;
@@ -230,12 +255,13 @@
       margin-top: auto;
       background: var(--mint);
       color: white;
-      padding: 10px 20px;
+      padding: 12px 20px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: 600;
       text-align: center;
       transition: all 0.3s ease;
+      min-height: 44px;
     }
     .post-card .btn:hover { background: var(--peach); transform: scale(1.05); }
 
@@ -260,6 +286,7 @@
       font-size: 1.1rem;
       box-shadow: 0 4px 15px rgba(196, 69, 105, 0.4);
       transition: all 0.3s ease;
+      min-height: 48px;
     }
     .cta a:hover { background: var(--tomato); transform: translateY(-3px); }
 
@@ -276,8 +303,10 @@
     @media (max-width: 768px) {
       main h1 { font-size: 2rem; }
       header .container { flex-direction: column; gap: 15px; }
-      .post-grid { grid-template-columns: 1fr; }
+      nav { flex-wrap: wrap; justify-content: center; }
+      .post-grid { grid-template-columns: 1fr; gap: 20px; }
       .post-title-overlay h2 a { font-size: 1.1rem; }
+      .announce-bar { font-size: 0.95rem; padding: 10px; }
     }
   </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNJBMH4K9X"></script>
@@ -309,7 +338,6 @@
     <h1>Fast Dinners for Busy People</h1>
     <p>No time? No problem. Get dinner on the table in 20-30 minutes with 5 ingredients or less. Real food, real fast. Keto & Low Carb options included.</p>
 
-    <!-- GRID OF POSTS -->
     <div class="post-grid">
       
       <article class="post-card">

@@ -6,10 +6,15 @@
   <title>About | eatingfoods.com</title>
   <meta name="description" content="Learn about eatingfoods.com and Ogonna - quick 5-ingredient dinners for busy people. All recipes tested in a real kitchen.">
   <link rel="canonical" href="https://eatingfoods.com/about.html">
+  <meta property="og:title" content="About | eatingfoods.com">
+  <meta property="og:description" content="Learn about eatingfoods.com and Ogonna - quick 5-ingredient dinners for busy people.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eatingfoods.com/about.html">
+  <meta property="og:image" content="https://eatingfoods.com/images/overnight-oats-meal-prep.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== COLOR PALETTE - SAME AS INDEX ===== */
     :root {
       --tomato: #FF6B6B;
       --lemon: #FFE66D;
@@ -36,7 +41,6 @@
       padding: 20px 0;
     }
 
-    /* ===== HEADER ===== */
     header {
       background: linear-gradient(90deg, var(--tomato), var(--peach), var(--lemon));
       padding: 20px 0;
@@ -70,9 +74,12 @@
       color: white;
       text-decoration: none;
       font-weight: 600;
-      padding: 8px 16px;
+      padding: 10px 16px;
       border-radius: 20px;
       transition: all 0.3s ease;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
     }
 
     nav a:hover {
@@ -80,7 +87,6 @@
       transform: translateY(-2px);
     }
 
-    /* CONTACT BUTTON STYLE */
     nav a.btn-contact {
       background: var(--berry);
       color: white;
@@ -94,7 +100,6 @@
       transform: translateY(-2px) scale(1.05);
     }
 
-    /* ===== MAIN CONTENT ===== */
     main {
       background: white;
       border-radius: 20px;
@@ -134,7 +139,6 @@
       border-radius: 12px;
     }
 
-    /* ===== CTA BOX ===== */
     .cta {
       background: linear-gradient(135deg, var(--lemon), var(--peach));
       padding: 35px;
@@ -162,6 +166,7 @@
       font-size: 1.1rem;
       box-shadow: 0 4px 15px rgba(196, 69, 105, 0.4);
       transition: all 0.3s ease;
+      min-height: 48px;
     }
 
     .cta a:hover {
@@ -169,7 +174,6 @@
       transform: translateY(-3px);
     }
 
-    /* ===== FOOTER ===== */
     footer {
       background: var(--dark);
       color: white;
@@ -187,7 +191,6 @@
       text-decoration: underline;
     }
 
-    /* ===== MOBILE ===== */
     @media (max-width: 600px) {
       main { padding: 25px; }
       header .container { flex-direction: column; gap: 15px; }
@@ -196,12 +199,13 @@
     }
   </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNJBMH4K9X"></script>
-‎<script>
-‎  window.dataLayer = window.dataLayer || [];
-‎  function gtag(){dataLayer.push(arguments);}
-‎  gtag('js', new Date());
-‎  gtag('config', 'G-RNJBMH4K9X');
-‎</script></head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RNJBMH4K9X');
+</script>
+</head>
 <body>
   <header>
     <div class="container">
@@ -240,7 +244,7 @@
     <div class="cta">
       <h3>Get My Free 5-Ingredient Shopping List</h3>
       <p>Start cooking faster tonight with this free PDF</p>
-      <a href="#">Download Free Now</a>
+      <a href="https://preview.mailerlite.io/forms/2571621/195590738332878400/share" target="_blank">Download Free Now</a>
     </div>
   </main>
 
